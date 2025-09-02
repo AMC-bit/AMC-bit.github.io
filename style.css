@@ -1,156 +1,208 @@
-/* Impostazioni base */
+
 body {
-font-family: 'Roboto', sans-serif;
-margin: 20px; /* il margine è lo spazio esterno */
-padding: 0; /* il padding è lo spazio interno */
-line-height: 1.6; /* altezza della linea */
-background-color: #f9f9f9;
-color: #333333;
-}
-
-/* NAVBAR */
-nav {
-background-color: #333333;
-padding: 10px;
-text-align: center; /* altri valori: left, right, justify */
-}
-
-nav a {
-text-decoration: none;
-margin: 0 15px 25px;
-font-weight: bold;
-color: #ffffff;
-transition: color 0.5s;
-}
-
-nav a:hover {
-color: #0066cc;
-}
-
-/* SEZIONI */
-section {
-padding: 40px 20px;
-background-color: #ffffff;
-border-bottom: 1px solid #999999; /* altri valori: dotted, dashed, double, groove, inset, outset */
-}
-
-section:nth-child(even) {
-    background-color: #f0f0f0; /* nth-child seleziona gli elementi in base alla loro posizione */
-}
-
-/* TITOLI */
-h1, h2, h3, h4 {
-    margin-top: 0;
-    color: #0066cc;
-}
-
-/* PARAGRAFI */
-p {
-    margin: 1em 0; /* em è l'unità di misura relativa alla dimensione del font cioè 1em = 16px */
-}
-
-/* LISTE */
-ul, ol {
-    margin-left: 1em;
-}
-
-/* LINK */
-a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: color 0.5s;
-    
-}
-a:hover {
-    text-decoration: none;
-    color: #003366;
-}
-
-/* HEADER */
-header {
-    position: sticky; /* sticky permette di mantenere l'header visibile durante lo scroll */
-    top: 0; /* top specifica la distanza dal bordo superiore della pagina */
-    z-index:100; /* z-index specifica l'ordine di sovrapposizione degli elementi */
-    background-color: white;
-    border-bottom: 1px solid #ccc; /* gli attributi rappresentano spessore tipo colore */
-}
-
-/* MAIN */
-main {
-    max-width: 600px;
-    margin: auto; /* margin auto centra l'elemento verticalmente e orizzontalmente */
-    padding: 20px;
-}
-
-/* FOOTER */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em; /* em è l'unità di misura relativa alla dimensione del font */
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-/* stili tabella */
-table {
-    width: 100%;
-    border-collapse: collapse; /* rimuove gli spazi tra le celle */
-    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;  /* ===== Font per l'intero body ===== */
+    margin: 20vw; /* ===== Margine Esterno ===== */
+    padding: 0px; /* ===== Margine Interno ===== */
+    line-height: 1.6; /* ===== Distanza tra le righe ===== */
     background-color: #ffffff;
-    border: #0066cc 1px solid;
-}
-th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+    color: #282A33 !important;
 }
 
-/* stile personalizzato */
-/* uso lo stile con il . perche nell html ho usato class="" */
-/* uso lo stile con il # perche nell html ho usato id="" */
 
-.box1 {
-    background-color: blueviolet;
+.site-wrapper2 {
+
+background: #475C7A;
+background: linear-gradient(0deg,rgba(71, 92, 122, 1) 0%, rgba(104, 93, 121, 1) 12%, rgba(161, 106, 129, 1) 26%, rgba(171, 108, 130, 1) 35%, rgba(216, 115, 127, 1) 48%, rgba(252, 187, 109, 1) 73%);
 }
 
-.box3 {
-    background-color: yellow;
+.site-wrapper {
+background: #ff914d;
+background: radial-gradient(circle,rgba(255, 145, 77, 1) 0%, rgba(209, 94, 108, 1) 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.btn-primary {
-  background-color: #ff36ab !important;
+
+.custom-navbar {
+  font-family: 'Montserrat';
+  background-color: #FCBB6D; 
+  padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+font-weight: 500 !important; 
+
+
+ /* zindex + pos absolute per elemento al top*/
+
+  position: absolute !important; /* or use 'fixed' if you want it to stay at the top on scroll */
+  top: 0.5em !important;
+  left: 2em !important;
+  right: 2em !important;
+  z-index: 9999 !important; /* ensures it appears above other content */
+
+
 }
 
-.btn-secondary {
-  background-color: #a217ff !important;
+.navbar-brand {
+  font-size: 1.25rem;
+  text-decoration: none;
 }
+
 
 .btn-custom {
-  background-color: #b3ff00 !important;
+  font-family: 'Montserrat' !important;
+  text-shadow: 3px 3px 3px rgba(56, 56, 56, 0.2) !important;
+  background-color: rgb(255, 57, 80) !important;
+  border-color: rgb(248, 46, 69) !important;
+  color: #282A33 !important;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2) !important;
 }
 
-#box4 {
-    background-color: orange;
+.btn-custom:hover {
+  background-color: rgb(255, 34, 60) !important;
+  border-color: rgb(255, 34, 60) !important;
 }
 
-div {
-    border: 1px solid #000;
-}
-/* Tablet grande (max-width: 1200px) */
-@media (max-width: 1200px) {
-    body {
-        background-color: rgb(23, 169, 218);
-    }
+
+/* ===== MAIN ===== */
+
+
+.container
+{
+/*z-index: 1 !important;*/
+/*background-color: rgb(9, 255, 0) !important;*/
 }
 
-/* Tablet piccolo (max-width: 992px) */
-@media (max-width: 992px) {
-    body {
-        background-color: rgb(16, 204, 16);
-    }
+.carousel-inner
+{
+  z-index: 1 !important;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+h1
+{
+  font-family: 'Montserrat';
+  font-size: 30px;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.bodytitles
+{
+  font-family: 'Montserrat';
+  font-size: 3em;
+  padding: 2rem 1rem 2rem 1rem;
+  font-weight: 900 !important; 
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px rgba(56, 56, 56, 0.2);
+}
+
+#chisono
+{
+text-align: center; 
+padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+#competenze
+{
+text-align: center; 
+padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+#xp
+{
+text-align: center; 
+padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+#contatti
+{
+text-align: center; 
+padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.card-body
+{
+background: rgb(241, 161, 86);
+}
+
+
+a {
+  color: rgba(209, 94, 108, 1 );           
+  text-decoration: none;    
+}
+
+a:hover {
+  color: rgb(253, 99, 117);           
+  text-decoration: underline; 
+}
+
+a:visited {
+  color: rgb(141, 37, 49);
+  text-decoration: none;            
+}
+
+a:active {
+  color: rgba(209, 94, 108, 1);           
+}
+
+
+.github-link {
+  font-family: 'Montserrat';
+  color: #282A33 !important;            
+  text-decoration: none;     
+  font-weight: bold;  
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.2);       
+}
+
+.github-link:hover {
+  color: rgb(189, 49, 65) !important;            
+  text-decoration: underline;
+}
+
+.facebook-link {
+  font-family: 'Montserrat';
+  color: #282A33 !important;           
+  text-decoration: none;     
+  font-weight: bold;    
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.2);     
+}
+
+.facebook-link:hover {
+  color: rgb(189, 49, 65) !important;          
+  text-decoration: underline;
+}
+
+
+.twitter-link {
+  font-family: 'Montserrat';
+  color: #282A33 !important;            
+  text-decoration: none;     
+  font-weight: bold;      
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.2);   
+}
+
+.twitter-link:hover {
+  color: rgb(189, 49, 65) !important;            
+  text-decoration: underline;
+}
+
+
+/* ===== FOOTER ===== */
+
+
+footer {
+    background-color: rgb(83, 55, 67);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(214, 160, 167);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em; /*em è l'unità di default del font*/
+    padding: 2rem 2rem 2rem 2rem;
+box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.2);
+    
 }
