@@ -280,16 +280,27 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+h1#hero-heading {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: clamp(40px, 6.5vw, 88px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  position: relative;
+  overflow: visible; /* ensure ::before shows */
+}
+
+
 .h-ultralight {
   display: block;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 3rem; /* or 1.125rem, or whatever size you need */
   margin-bottom: 1rem; /* adjust as needed */
 }
 
 .h-light {
   display: block;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .h-sub {
@@ -298,27 +309,27 @@ h1 {
 }
 
 .designer {
-  display: inline-block;
-  position: relative;
-  font-weight: 700;
-  color: var(--accent);
-  font-size: clamp(36px, 6.5vw, 84px);
-  margin-top: 6px;
+  display: inline-block !important;
+  position: relative !important;
+  font-weight: 700 !important;
+  color: var(--accent) !important;
+  font-size: clamp(36px, 6.5vw, 84px) !important;
+  margin-top: 6px !important;
 }
 
-/* purple highlight block behind "Designer." */
 .designer::before {
   content: "";
   position: absolute;
   left: -6px;
   right: -6px;
+  top: 10%;          /* instead of 36% */
   bottom: 6px;
-  top: 36%;
-  z-index: -1;
+  z-index: 0;
   background: linear-gradient(0deg, var(--accent-50), var(--accent-20));
   border-radius: 6px;
   transform: skewX(-0.01turn);
 }
+
 
 p.lead {
   max-width: 680px;
@@ -399,9 +410,7 @@ p.lead {
 .progress-bar.bg-success {
   background-color: #000000 !important; /* Medium blue */
 }
-
-
-/* responsive adjustments */
+/* Responsive hero adjustments */
 @media (max-width: 1100px) {
   .hero {
     grid-template-columns: 1fr 420px;
@@ -429,15 +438,12 @@ p.lead {
     order: -1;
   }
 
-
-  
-
   .dot-grid {
     display: none;
   }
 
   .designer::before {
-    top: 45%;
+    top: 20%;
   }
 }
 
@@ -452,10 +458,11 @@ p.lead {
     height: 40px;
   }
 
-  h1 {
+  h1#hero-heading {
     font-size: 44px;
   }
 }
+
  
 
 /* Custom purple link color */
